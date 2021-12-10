@@ -1,0 +1,108 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.header{
+    color: white;
+    background: #000;
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .menu{
+        background: orange;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100px;
+        align-items: center;
+    }
+        .logo{
+            background: red;
+            flex: 1 1 auto;
+            height: 30%;
+        }
+        .nav{
+            background: green;
+            flex: 5 1 auto;
+            height: 30%;
+        }
+        .social{
+            background: blue;
+            flex: 1 1 auto;
+            height: 30%;
+        }
+    .texto-principal{
+        background: yellow;
+    }
+        h1{
+            background: navy;
+        }
+
+
+section{
+    background: #000;
+    display: flex;
+    
+}
+    .articulos{
+        background: rebeccapurple;
+        flex: 2 1 auto; /*dar tamaño del flex*/
+        display: flex;  /*poner los flex uno al lado del otro*/
+        flex-flow: row wrap;/*pasa las cajas abajo*/
+    }
+        .article{
+            background: red;
+            flex: 1 1 40%;
+        }
+        .navegacion{
+            background: yellow;
+            flex: 1 1 100%; /*cubre el 100%*/
+        }
+    .aside{
+        background: greenyellow;
+        flex: 1 1 auto;
+    }
+        .publicidad{
+            background: red;
+        }
+
+.footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+    .pie{
+        background: red;
+        width: 300px;
+        
+    }
+
+@media all and (max-width: 800px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;
+    }
+}
